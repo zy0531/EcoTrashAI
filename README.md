@@ -11,11 +11,11 @@ Classifying trash types is essential for proper disposal, helping to protect the
 ## Exploratory Data Analysis (EDA)
 A visualization of the 6 trash classes.
 
-![](/images/class.jpg)
+<img src="/images/class.jpg" alt="class" width="500"/>
 
 The proportions of classes in the training set, validation set, and the test set are different.
 
-![](/images/data.jpg)
+<img src="/images/data.jpg" alt="data" width="800"/>
 
 ## Metrics and Modeling
 
@@ -93,6 +93,11 @@ The proportions of classes in the training set, validation set, and the test set
 
 ## Analysis
 
+- Learning Curve
+- <img src="/images/lc.jpg" alt="learning curve" width="800"/>
+
+- Scores
+- <img src="/images/score.jpg" alt="scores" width="500"/>
 |  | precision | recall | F1 |
 |----------|----------|----------|----------|
 | b0 | torchvision model| b0 with a | Row 1 Col 3 |
@@ -100,8 +105,17 @@ The proportions of classes in the training set, validation set, and the test set
 | b0_aug | Row 3 Col 2 | Row 3 Col 3 | |
 | b0_long_aug | torchvision model| b0 with a | Row 1 Col 3 |
 
+- Confusion Matrix of the Best model
+<img src="/images/confusion_matrix.jpg" alt="confusion matrix" width="500"/>
+
+- Conclusions
+  - The validation set is easier than the training set. Models tend to perform better on the validation set.
+  - The b0_long model has the best learning curve. The asymptotic behaviors on the training set and validation set are close.
+  - The modified classier helps the b0_long model to learn the patten in the training set.
+  - Data augmentation does not help improving the performance. Perhaps the model is too simple. Even leaning the default training set requires a modified classifier (b0_long).
+  - A longer classifier can be tested in the future for performance improvement.
+
 ## Deployment
 
-## Acknowledgement
-- 
--
+## Reference
+- https://www.learnpytorch.io/
