@@ -34,7 +34,22 @@ The proportions of classes in the training set, validation set, and the test set
     
 - Optimizer
   - `optimizer = torch.optim.Adam(params=model.parameters(), lr=0.001)`
-  - learning curve: https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/
+  - algorithm
+    - get gradient: $g_t = \nabla f$
+    - update biased first moment and second moment:
+      - $m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t = \sum_{i=1}^t \beta_1^{t-i}(1-\beta_1)g_i$
+      - $v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$
+    - compute unbiased moments: $\hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$
+    - update parameter: $\theta_t = \theta_{t-1} - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}$
+  - pros
+    - combine AdaGrad and RMSProp
+    - adjust learning rate for each parameter individually
+    - use momentum to speed up convergence and avoid oscillation
+    - correct bias in the early stages of training
+  - cons
+    - converge to local minimum
+    - require hyperparameter tuning
+      - 
 
 - Scheduler
   - `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`
@@ -93,7 +108,7 @@ The proportions of classes in the training set, validation set, and the test set
 
 ## Analysis
 
-- Learning Curve
+- Learning Curve (https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
 - <img src="/images/lc.jpg" alt="learning curve" width="800"/>
 
 - Scores
