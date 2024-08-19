@@ -2,7 +2,7 @@
 
 ## Inroduction
 
-Classifying trash types is essential for proper disposal, helping to protect the ecosystem and facilitate recycling. This project develops a trash classifier using state-of-the-art computer vision technology. The classifier can be used locally as a Gradio app or deployed on Hugging Face as a web app.
+Classifying trash types is essential for proper disposal, helping to protect the ecosystem and facilitate recycling. This project develops a trash classifier using state-of-the-art computer vision technology. The classifier can be used locally as a Gradio app.
 
 ## Dataset
 
@@ -130,7 +130,14 @@ The proportions of classes in the training set, validation set, and the test set
   - Data augmentation does not help improving the performance. Perhaps the model is too simple. Even leaning the default training set requires a modified classifier (b0_long).
   - A longer classifier can be tested in the future for performance improvement.
 
-## Deployment
+## Gradio App
+
+- App Interface
+<img src="/images/app.jpg" alt="scores" width="1000"/>
+
+- classify an image
+<img src="/images/classified.jpg" alt="scores" width="1000"/>
+
 
 ## Reference
 - https://www.learnpytorch.io/
