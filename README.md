@@ -113,12 +113,12 @@ The proportions of classes in the training set, validation set, and the test set
 
 - Scores
 - <img src="/images/score.jpg" alt="scores" width="500"/>
-|  | precision | recall | F1 |
-|----------|----------|----------|----------|
-| b0 | torchvision model| b0 with a | Row 1 Col 3 |
-| b0_long | Row 2 Col 2 | Row 2 Col 3 | |
-| b0_aug | Row 3 Col 2 | Row 3 Col 3 | |
-| b0_long_aug | torchvision model| b0 with a | Row 1 Col 3 |
+|  | accuracy | precision | recall | F1 score|
+|----------|----------|----------|----------|----------|
+| b0 | 0.493947 | 0.846667 | 0.916385	| 0.846667 | 0.875846 |
+| b0_long | 0.381804 | 0.878333 | 0.946747 | 0.878333 | 0.908103 |
+| b0_aug | 0.579488	| 0.825000 | 0.899522	| 0.825000 | 0.853236 |
+| b0_long_aug | 0.501828 | 0.850000	| 0.887555 | 0.850000	| 0.858136 |
 
 - Confusion Matrix of the Best model
 <img src="/images/confusion_matrix.jpg" alt="confusion matrix" width="500"/>
