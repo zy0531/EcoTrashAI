@@ -26,9 +26,10 @@ The proportions of classes in the training set, validation set, and the test set
 
 - Metric
   - score
+    - [x] accuracy: all classes and errors are equally important, balanced dataset, initial evaluation, simple classification tasks with clearn boundary (recision and recall are more informative with ambiguous decision boundaries), 
     - [x] precision: if false positive is an issue
     - [x] recall: if false negative is an issue
-    - [x] $F1$: balance
+    - [x] $F1$: balance of precision and recall
     - [ ] beta $F1$: $(1+\beta^2) \frac{\mathrm{precision} \cdot \mathrm{recall}}{\beta^2 \mathrm{precision} + \mathrm{recall} }$, $\beta = 1$ is F1, $\beta < 1$, precision is weighted more, $\beta > 1$, recall is weighted more.
   - average method (e.g. precission)
     - [x] weighted average: take into account the class distribution, a balanced evaluation for imbalanced dataset
@@ -43,7 +44,7 @@ The proportions of classes in the training set, validation set, and the test set
     - get gradient: $g_t = \nabla f$
     - update biased first moment and second moment:
       - $m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t = \sum_{i=1}^t \beta_1^{t-i}(1-\beta_1)g_i$
-      - $v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$
+      - $v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2 = \sum_{i=1}^t \beta_2^{t-i}(1-\beta_2)g_i^2$
     - compute unbiased moments: $\hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$
     - update parameter: $\theta_t = \theta_{t-1} - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}$
   - pros
