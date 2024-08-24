@@ -2,7 +2,7 @@
 
 ## Inroduction
 
-Classifying trash types is essential for proper disposal, helping to protect the ecosystem and facilitate recycling. This project develops a trash classifier using state-of-the-art computer vision technology. The classifier can be used locally as a Gradio app.
+Classifying trash types is essential for proper disposal, helping to protect the ecosystem and facilitate recycling. This project develops a trash classifier using state-of-the-art computer vision technology. The classifier can either be used locally or deployed as a Gradio app.
 
 ## Demo
 - app link: https://huggingface.co/spaces/shl159/EcoTrashAI
