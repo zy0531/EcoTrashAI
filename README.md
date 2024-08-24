@@ -39,7 +39,7 @@ The proportions of classes in the training set, validation set, and the test set
   - cross entropy
     
 - Optimizer
-  - `optimizer = torch.optim.Adam(params=model.parameters(), lr=0.001)`
+  - `optimizer = torch.optim.Adam(params=model.parameters(), lr=0.001, betas=(0.9, 0.999))`
   - algorithm
     - get gradient: $g_t = \nabla f$
     - update biased first moment and second moment:
