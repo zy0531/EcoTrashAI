@@ -57,7 +57,7 @@ The proportions of classes in the training set, validation set, and the test set
       - 
 
 - Scheduler
-  - [x] `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`  if the monitored metric does not improve for 4 epochs, the learning rate will be multiplied by 0.1
+  - [x] `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`  if the monitored metric does not improve for 4 epochs, the learning rate will be multiplied by 0.1, adaptive, may find local minima
   - [ ] `StepLR` reduce the learning rate by a factor(gamma every step_size epochs, easy to implement, not adaptive, does not consider the model performance
   - [ ] `ExponentialLR` decrease the learning rate by a factor gamma every epoch, continuous and smooth decrease, not adaptive, need careful selection of gamma
   - [ ] `CosineAnnealingLR(optimizer, T_max=50)` adjusts the learning rate according to a cosine function, decreasing it gradually to a minimum and then potentially restarting, can work cyclically
