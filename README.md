@@ -57,7 +57,14 @@ The proportions of classes in the training set, validation set, and the test set
       - 
 
 - Scheduler
-  - `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`
+  - [x] `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`  if the monitored metric does not improve for 4 epochs, the learning rate will be multiplied by 0.1
+  - [ ] `StepLR` reduce the learning rate by a factor(gamma every step_size epochs, easy to implement, not adaptive, does not consider the model performance
+  - [ ] `ExponentialLR` decrease the learning rate by a factor gamma every epoch, continuous and smooth decrease, not adaptive, need careful selection of gamma
+  - [ ] `CosineAnnealingLR(optimizer, T_max=50)` adjusts the learning rate according to a cosine function, decreasing it gradually to a minimum and then potentially restarting, can work cyclically
+  - [ ] `CyclicLR(optimizer, base_lr=0.001, max_lr=0.01, step_size_up=2000)` cycles the learning rate between two boundaries (base_lr and max_lr) with a certain frequency, avoid local minima, works well with large dataset
+  - [ ] `OneCycleLR` increases the learning rate up to a maximum value (max_lr) and then decreases it again, adjust the momentum of the optimizer in an inverse manner, following a 1-cycle policy (Warm-Up Phase, Annealing Phase, Momentum Scheduling, Momentum Scheduling), fast convergence and better generalization, overkill for small datasets and simple models
+  - [ ] `MultiplicativeLR` multiply the lerning rate by a customized function, flexible, not adaptive
+  - [ ] `LambdaLR(optimizer, lr_lambda=lambda epoch: 0.95 ** epoch)`, customized schedule, flexible, not adaptive
 
   
 - Early stopping
