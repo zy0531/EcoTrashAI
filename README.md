@@ -6,6 +6,7 @@ Classifying trash types is essential for proper disposal, helping to protect the
 
 ## Demo
 - app link: https://huggingface.co/spaces/shl159/EcoTrashAI
+
 ![](images/demo.gif)
 
 ## Dataset
