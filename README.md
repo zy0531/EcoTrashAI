@@ -40,6 +40,7 @@ The proportions of classes in the training set, validation set, and the test set
     
 - Optimizer
   - `optimizer = torch.optim.Adam(params=model.parameters(), lr=0.001, betas=(0.9, 0.999))`
+  - The Adam optimizer adaptively updates parameters by accumulating first and second moments of past gradients. It uses the square root of the second moment (often referred to as velocity) to normalize the updates, which helps prevent the vanishing or exploding of gradients. As a result, Adam emphasizes the direction (sign) of the gradient over its magnitude, leading to more stable and consistent parameter updates.
   - algorithm
     - get gradient: $g_t = \nabla f$
     - update biased first moment and second moment:
