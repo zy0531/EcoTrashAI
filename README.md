@@ -54,8 +54,7 @@ The proportions of classes in the training set, validation set, and the test set
     - correct bias in the early stages of training
   - cons
     - converge to local minimum
-    - require hyperparameter tuning
-      - 
+    - require hyperparameter tuning 
 
 - Scheduler
   - [x] `ReduceLROnPlateau(optimizer, mode='min', patience=4, factor=0.1, verbose=True)`  if the monitored metric does not improve for 4 epochs, the learning rate will be multiplied by 0.1, adaptive, may find local minima
