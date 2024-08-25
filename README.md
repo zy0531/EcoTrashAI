@@ -152,6 +152,6 @@ The proportions of classes in the training set, validation set, and the test set
 <img src="/images/classified.jpg" alt="scores" width="1000"/>
 
 
-## Reference
+## References
 - [GARBAGE CLASSIFICATION 3 Dataset v2](https://universe.roboflow.com/material-identification/garbage-classification-3/dataset/2)
 - https://www.learnpytorch.io/
